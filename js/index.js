@@ -6,6 +6,11 @@ function getAge() {
     // 差分をミリ秒から日に直す
     var dayPast = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-    alert(dayPast + '日経過しました。');
+    // 大体の年齢
+    var age = Math.floor(dayPast / 365.25);
+
+    // HTMLに挿入する
+    document.getElementById('dayPast').innerHTML = dayPast;
+    document.getElementById('age').innerHTML = age;
 
 }
